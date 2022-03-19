@@ -42,3 +42,33 @@ python3 src/loan_analyzer.py
 | Deployment and Submission | Contain appropriate commit messages           |  5    |   x   |
 | Comments | Be well commented with concise, relevant notes                 |  10   |   x   |
 
+# Sample execution output
+```
+Automation
+----------------------
+total number of loans: 5
+total value of loans: 2750
+average loan price: 550.0
+
+Analysis
+----------------------
+Future Value of loan: 1000
+Remaining Months of loan: 9
+Present Value: 861.77
+loan with a present value of 861.77 is at least worth the cost of 500.00
+
+Financial Calculations
+----------------------
+The present value of the new loan is: 820.08
+
+Filter Lists of Loans
+----------------------
+inexpensive loans:
+   0 - {'loan_price': 500, 'remaining_months': 13, 'repayment_interval': 'bullet', 'future_value': 1000}
+   1 - {'loan_price': 200, 'remaining_months': 16, 'repayment_interval': 'bullet', 'future_value': 1000}
+
+Save Results
+----------------------
+saved inexpensive loans to inexpensive_loans.csv
+
+```
