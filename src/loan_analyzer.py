@@ -90,7 +90,7 @@ print(f"Remaining Months of loan: {remaining_months}")
 discount_rate = 0.2
 # @TODO: confirm PV formula
 present_value = float(future_value) / ((1 + discount_rate/float(12))**float(remaining_months) )
-print(f"Present Value: {present_value}")
+print("Present Value: {:.2f}".format(present_value))  # format to two decimal points
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
@@ -99,9 +99,9 @@ print(f"Present Value: {present_value}")
 # YOUR CODE HERE!
 loan_price = loan.get('loan_price')
 if present_value >= loan_price:
-    print(f"loan with a present value of {present_value} is at least worth the cost of {loan_price}")
+    print("loan with a present value of {:.2f} is at least worth the cost of {:.2f}".format(present_value,loan_price)) 
 else:
-    print(f"loan with a present value of {present_value} is less than the cost of {loan_price}.  It is too expensive and not worth the price.")
+    print("loan with a present value of {:.2f} is less than the cost of {:.2f}.  It is too expensive and not worth the price.".format(present_value,loan_price)) 
 
 print()  # line feed to denote end of section 
 
@@ -145,7 +145,7 @@ new_loan_present_value = calculate_present_value(   new_loan.get('future_value')
                                                     new_loan.get('remaining_months'),
                                                     annual_discount_rate) 
 
-print(f"The present value of the new loan is: {new_loan_present_value}")
+print("The present value of the new loan is: {:.2f}".format(new_loan_present_value))  # format to two decimal points
 
 print()  # line feed to denote end of section 
 

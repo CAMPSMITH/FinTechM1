@@ -20,10 +20,10 @@ python3 src/loan_analyzer.py
 | Automation | Print calculations with descriptive message                  |   2   |   x   |
 | Automation | Run without error                                            |   2   |   x   |
 | Analysis   | Extract future value and remaining months                    |   5   |   x   |
-| Analysis   | Calculate the fair value                                     |   5   |   ?   |
+| Analysis   | Calculate the fair value                                     |   5   |   x   |
 | Analysis   | Print the loan's fair value using condition                  |   5   |   x   |
-| Analysis   | Analyze the loan value                                       |   5   |   ?   |
-| Financial Calculations | Create a new function to calculate present value |  10   |   ?   |
+| Analysis   | Analyze the loan value                                       |   5   |   x   |
+| Financial Calculations | Create a new function to calculate present value |  10   |   x   |
 | Financial Calculations | Use a function to calculate the present value    |  10   |   x   |
 | Filter Lists of Loans | Create an empty list                              |  1    |   x   |
 | Filter Lists of Loans | Use a for loop to select loans                    |  3    |   x   |
