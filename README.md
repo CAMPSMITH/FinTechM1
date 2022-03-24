@@ -5,10 +5,15 @@ Berkely FinTech Bootcamp Module 1 Challenge
 ## Due date: 2022-04-03
 
 # Running the module file
-The file for this challenge is located in the **src** folder
-To run from the root of this repo:
+The file for this challenge is located in the **src** folder.
+To run from the root of this repo
+   * start the dev VM
+   * run python
+   * deactivate VM when done 
 ```
-python3 src/loan_analyzer.py
+conda activate dev
+python src/loan_analyzer.py
+conda deactivate
 ``` 
 
 # Grading Rubric

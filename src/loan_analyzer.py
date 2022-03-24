@@ -35,7 +35,7 @@ print(f"total value of loans: {total_loan_values}")
 # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
 # Print the average loan amount
 # YOUR CODE HERE!
-average_price = float(total_loan_values)/float(count_loans)
+average_price = total_loan_values/count_loans
 print(f"average loan price: {average_price}")
 
 print()  # line feed to denote end of section 
@@ -89,8 +89,8 @@ print(f"Remaining Months of loan: {remaining_months}")
 # YOUR CODE HERE!
 discount_rate = 0.2
 # @TODO: confirm PV formula
-present_value = float(future_value) / ((1 + discount_rate/float(12))**float(remaining_months) )
-print("Present Value: {:.2f}".format(present_value))  # format to two decimal points
+present_value = future_value / (1 + discount_rate/12)**remaining_months 
+print(f"Present Value: {present_value:.2f}")  
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
@@ -99,9 +99,9 @@ print("Present Value: {:.2f}".format(present_value))  # format to two decimal po
 # YOUR CODE HERE!
 loan_price = loan.get('loan_price')
 if present_value >= loan_price:
-    print("loan with a present value of {:.2f} is at least worth the cost of {:.2f}".format(present_value,loan_price)) 
+    print(f"loan with a present value of {present_value:.2f} is at least worth the cost of {loan_price:.2f}") 
 else:
-    print("loan with a present value of {:.2f} is less than the cost of {:.2f}.  It is too expensive and not worth the price.".format(present_value,loan_price)) 
+    print(f"loan with a present value of {present_value:.2f} is less than the cost of {loan_price:.2f}.  It is too expensive and not worth the price.") 
 
 print()  # line feed to denote end of section 
 
@@ -130,11 +130,8 @@ new_loan = {
 #    This function should include parameters for `future_value`, `remaining_months`, and the `annual_discount_rate`
 #    The function should return the `present_value` for the loan.
 # YOUR CODE HERE!
-def calculate_present_value(future_value,remaining_months,annual_discount_rate):
-    # 0.2 annual discount rate is common in this module
-    # defaulting the annual_discount_rate to 0.2 when not explicitely provided
-    # @TODO: confirm PV formula
-    present_value = float(future_value) / ((1 + annual_discount_rate/float(12))**float(remaining_months) )
+def calculate_present_value(future_value, remaining_months, annual_discount_rate):
+    present_value = future_value / (1 + annual_discount_rate/12) ** remaining_months
     return present_value
 
 # @TODO: Use the function to calculate the present value of the new loan given below.
@@ -145,7 +142,7 @@ new_loan_present_value = calculate_present_value(   new_loan.get('future_value')
                                                     new_loan.get('remaining_months'),
                                                     annual_discount_rate) 
 
-print("The present value of the new loan is: {:.2f}".format(new_loan_present_value))  # format to two decimal points
+print(f"The present value of the new loan is: {new_loan_present_value:.2f}")  
 
 print()  # line feed to denote end of section 
 
@@ -203,10 +200,8 @@ for loan in loans:
 # @TODO: Print the `inexpensive_loans` list
 # YOUR CODE HERE!
 print("inexpensive loans:" )
-i = 0  # 0 ordinal iterator index used in the printing the list of inexpensive loans
 for loan in inexpensive_loans:
-    print(f"   {i} - {loan}")
-    i += 1
+    print(f"\t{loan}")
 
 print()  # line feed to denote end of section 
 
