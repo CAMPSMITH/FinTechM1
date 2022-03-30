@@ -1,5 +1,5 @@
 # FinTechM1
-Berkely FinTech Bootcamp Module 1 Challenge
+Berkeley FinTech Bootcamp Module 1 Challenge
 
 ## Submitted by Martin Smith
 ## Due date: 2022-04-03
